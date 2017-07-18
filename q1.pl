@@ -1,0 +1,13 @@
+male(anthony).
+male(harry).
+male(tom).
+female(mary).
+female(hazel).
+parent(anthony,harry).
+parent(anthony,hazel).
+parent(mary,hazel).
+parent(mary,harry).
+spouse(anthony,marry).
+spouse(hazel,tom).
+sister(X,S):-parent(Z,X),parent(Z,S),female(S).
+father(X,Y):-parent(Y,X),male(Y).
