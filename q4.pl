@@ -1,0 +1,14 @@
+person('ram',15,'football','dog').
+person('mohan',11,'volleyball','cat').
+person('sohan',25,'card','cow').
+person('mahesh',30,'swimming','dog').
+person('ravindra',11,'football','goat').
+person('rakesh',25,'volleyball','cat').
+person('rajeev',15,'swimming','dog').
+person('raju',30,'swimming','dog').
+person('jaichand',40,'football','cow').
+person('vijay',30,'volleyball','cat').
+hobby(X,Y):-person(X,_,Y,_).
+age(X,Y):-person(X,Y,_,_).
+child(X,Y):-person(X,Y,_,_),Y<16.
+like(X,Y):-person(X,AX,I,_),person(Y,AY,I,_),child(X,AX),child(Y,AY),\+(AX=AY),\+(X=Y).
